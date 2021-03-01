@@ -22,30 +22,6 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Smoothies</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.youtube.com/results?search_query=smoothie+tutorial">Tutorials</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://products.wholefoodsmarket.com/">Ingredients</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://fitfoodiefinds.com/100-healthy-smoothie-recipes/">Recipes</a>
-          </li>
-        </ul>
-      </div>
-    </div>
   </nav>
 
   <!-- Page Content -->
@@ -74,21 +50,27 @@
     </div>
 
     <!-- Content Row -->
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col-md-8 mb-5">
-        <div class="card h-100">
+        <div class="card h-100 text-center">
           <div class="card-body">
             <h2 class="card-title">Smoothie Tutorial</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VYYhlbeTdbU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+            <!-- 16:9 aspect ratio -->
+            <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VYYhlbeTdbU"></iframe>
+            </div>
           <div class="card-footer">
             <a href="https://www.youtube.com/results?search_query=smoothie+tutorial" class="btn btn-primary btn-sm">Others Like This</a>
           </div>
         </div>
       </div>
+          </div>
+
+      <div class="w-100"></div>
+
       <!-- /.col-md-4 -->
       <div class="col-md-4 mb-5">
-        <div class="card h-100">
+        <div class="card h-100 text-center">
           <div class="card-body">
             <h2 class="card-title">Ingredients</h2>
             <p class="card-text"> Purchase Ingredients at Whole Foods Market: </p>
@@ -102,14 +84,16 @@
       </div>
       <!-- /.col-md-4 -->
       <div class="col-md-4 mb-5">
-        <div class="card h-100">
+        <div class="card h-100 text center">
           <div class="card-body">
             <h2 class="card-title">Recipes</h2>
+            <h6>price <span id="theprice">$1.00</span></h6>
             <p class="card-text">From green smoothie recipes to a basic strawberry smoothie, here are all the smoothie inspiration you need right here!</p>
             <img class="img-fluid rounded mb-4 mb-lg-0" src="smoothieRecipes.jpg" alt="Fruit">
           </div>
           <div class="card-footer">
             <a href="https://fitfoodiefinds.com/100-healthy-smoothie-recipes/" class="btn btn-primary btn-sm">See Recipes</a>
+            <a href="#" id="changePrice" class="btn btn-primary btn-sm">Change Price</a>
           </div>
         </div>
       </div>
@@ -124,7 +108,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+      <p class="m-0 text-center text-white">Copyright &copy; Smoothies 2020</p>
     </div>
     <!-- /.container -->
   </footer>
@@ -132,6 +116,14 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript">
+  console.log("Hello world");
+  $("nav").load("nav.html")
+
+
+
+</script>
 
 </body>
 
